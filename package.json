@@ -1,0 +1,16 @@
+{
+  "name": "nodejs-url-access-log",
+  "version": "1.0.0",
+  "description": "NodeJS REST API Sample",
+  "author": "Hien Nguyen",
+  "reference": "From Romuald Tuffreau https://github.com/romwaldtff",
+  "dependencies": {
+    "bluebird": "*",
+    "body-parser": "*",
+    "ejs": "*",
+    "express": "*",
+    "short-hash": "^1.0.0",
+    "sqlite": "*",
+    "sqlite3": "latest"
+  }
+}
