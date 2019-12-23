@@ -5,16 +5,13 @@ class AccessInfo {
     }
 
     getHourlyAccessTime() {
-
         let hourlyTime = new Date(this.accessTime);
         hourlyTime.setMinutes(0);
         hourlyTime.setSeconds(0);
         hourlyTime.setMilliseconds(0);
-        return hourlyTime;
-    }
-
-    getHourlyAccessTimeString() {
-
+        return hourlyTime.toISOString()
+            .replace(/T/, ' ')
+            .replace(/\..+/, '');
     }
 }
 
