@@ -43,12 +43,14 @@ class AppDao {
             $id: url.id,
             $value: url.value
         };
+
+        // Assume posting url is access. Just for test stats stuff
         this.addAccessInfo(url.id);
         return this.base.run(sqlRequest, sqlParams);
     };
 
     addAccessInfo(urlId) {
-        let sqlRequest = "INSERT into url (urlId, accessTime, hourlyTime) " +
+        let sqlRequest = "INSERT into access_info (urlId, accessTime, hourlyTime) " +
             "VALUES ($urlId, $accessTime, $hourlyTime)";
         let accessInfo = new AccessInfo(urlId);
         let sqlParams = {

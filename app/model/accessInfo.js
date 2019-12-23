@@ -5,7 +5,8 @@ class AccessInfo {
     }
 
     getHourlyAccessTime() {
-        let hourlyTime = Date.parse(this.accessTime);
+
+        let hourlyTime = new Date(this.accessTime);
         hourlyTime.setMinutes(0);
         hourlyTime.setSeconds(0);
         hourlyTime.setMilliseconds(0);
