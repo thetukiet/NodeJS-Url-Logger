@@ -1,8 +1,7 @@
-class Access {
-    constructor(id, urlId, accessTime) {
-        this.id = id;
+class AccessInfo {
+    constructor(urlId) {
+        this.accessTime = new Date();
         this.urlId = urlId;
-        this.accessTime = accessTime;
     }
 
     getHourlyAccessTime() {
@@ -18,4 +17,4 @@ class Access {
     }
 }
 
-module.exports = Access;
+module.exports = AccessInfo;

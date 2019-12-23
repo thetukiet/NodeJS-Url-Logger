@@ -1,7 +1,5 @@
-const BaseController = require('./base/baseController');
-const Url = require('../model/url');
-const Access = require("../model/access");
 
+const BaseController = require('./base/baseController');
 
 class CarController {
 
