@@ -1,4 +1,3 @@
-
 class Access {
     constructor(id, urlId, accessTime) {
         this.id = id;
@@ -7,7 +6,11 @@ class Access {
     }
 
     getHourlyAccessTime() {
-
+        let hourlyTime = Date.parse(this.accessTime);
+        hourlyTime.setMinutes(0);
+        hourlyTime.setSeconds(0);
+        hourlyTime.setMilliseconds(0);
+        return hourlyTime;
     }
 
     getHourlyAccessTimeString() {
