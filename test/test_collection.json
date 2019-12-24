@@ -1,0 +1,440 @@
+{
+	"info": {
+		"_postman_id": "c6d91cef-0495-4a19-a6a4-63e497ff8f79",
+		"name": "URL.Node.Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add URL",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{login_token}}"
+					},
+					{
+						"key": "ipaddress",
+						"type": "text",
+						"value": "172.27.234.149"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/register.json?url=http://www.vingle.net",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"register.json"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "http://www.vingle.net"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get BAC Available Templates",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{login_token}}"
+							},
+							{
+								"key": "ipaddress",
+								"type": "text",
+								"value": "172.27.234.149"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9010/ress/alerts-view/bac/templates?riskThemeId=3001&riskLabelId=2001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"ress",
+								"alerts-view",
+								"bac",
+								"templates"
+							],
+							"query": [
+								{
+									"key": "riskThemeId",
+									"value": "3001"
+								},
+								{
+									"key": "riskLabelId",
+									"value": "2001"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "token, logout, filename, filetype"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ6eFN2SHNoVUFOWVlWbXRzOVRjckdSTEdGQ2lvZzBwZm1uemxiRXo2ekxZIn0.eyJqdGkiOiI1MjU1ZDQ0ZS0xN2UyLTRjY2QtYjVmNC0yOGIyNmFiZmZiMGUiLCJleHAiOjE1NzI1Mzc3NDQsIm5iZiI6MCwiaWF0IjoxNTcyNTM3NDQ0LCJpc3MiOiJodHRwOi8vMTAuMTA0LjEyMS43Nzo4MDAwL2F1dGgvcmVhbG1zL1JFU1MiLCJzdWIiOiI2ZDQ4YWEwMC1iOTg1LTQ2YjEtOTU2Yy0xOWM5ZWZmODc4MWIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJyZXNzd2ViIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiOTkwYjI2YjEtYzk4MC00OGMxLWFkYzYtMWE5NzQzYjQ3YTliIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIiXSwicmVzb3VyY2VfYWNjZXNzIjp7InJlc3N3ZWIiOnsicm9sZXMiOlsiUmVnaW9uYWxTSCJdfX0sInNjb3BlIjoiIiwiY291bnRyeSI6Ik1ZIiwiYWRkcmVzcyI6eyJjb3VudHJ5IjoiMCJ9LCJuYW1lIjoiTGkgTGkgTHUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJteWN2MXZnYyIsImdpdmVuX25hbWUiOiJMaSIsImZhbWlseV9uYW1lIjoiTGkgTHUifQ.JX8jFn5iiT12FOvVUNgetFEDs8y_jysPQksdm4isH94uuaGCc4D2BhOxlflIwTSMAN7w3Mbn9P251wviKei2reAOAszxy7ANbqvkHdtAAg1xuJQJMVuP0dVOaEJVpr0pRaHXioRnNHeAn_dc_G7PZe10b-ZSYcITecgoP0WZsxVk3Oh8-svazeCUt_oI-p4jdZ4dkfffV4jB90fdDuEHh67sUAg4EfLKIUGOdfWsMje-atac9Gl7PAdn156L__1lsVvmtR_RDpNQlYKQDI_BULuy0tTBASCHve_Fh18HtsSEZ08N_BrkTrDkG7mV6expQ-fsjEAnu4Mb6mz3F0egzQ"
+						},
+						{
+							"key": "logout",
+							"value": "false"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Nov 2019 07:02:22 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1002,\n        \"name\": \"BAC Left\",\n        \"riskLabelId\": 2001,\n        \"riskThemeId\": 3001,\n        \"createdBy\": \"ressuser1\",\n        \"latestVersion\": \"v.1\",\n        \"active\": true\n    },\n    {\n        \"id\": 1003,\n        \"name\": \"BAC Right\",\n        \"riskLabelId\": 2001,\n        \"riskThemeId\": 3001,\n        \"createdBy\": \"ressuser1\",\n        \"latestVersion\": \"v.1\",\n        \"active\": true\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Stats",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{login_token}}"
+					},
+					{
+						"key": "ipaddress",
+						"type": "text",
+						"value": "172.27.234.149"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/b0b16590/stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"b0b16590",
+						"stats"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get BAC Available Templates",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{login_token}}"
+							},
+							{
+								"key": "ipaddress",
+								"type": "text",
+								"value": "172.27.234.149"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9010/ress/alerts-view/bac/templates?riskThemeId=3001&riskLabelId=2001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"ress",
+								"alerts-view",
+								"bac",
+								"templates"
+							],
+							"query": [
+								{
+									"key": "riskThemeId",
+									"value": "3001"
+								},
+								{
+									"key": "riskLabelId",
+									"value": "2001"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "token, logout, filename, filetype"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ6eFN2SHNoVUFOWVlWbXRzOVRjckdSTEdGQ2lvZzBwZm1uemxiRXo2ekxZIn0.eyJqdGkiOiI1MjU1ZDQ0ZS0xN2UyLTRjY2QtYjVmNC0yOGIyNmFiZmZiMGUiLCJleHAiOjE1NzI1Mzc3NDQsIm5iZiI6MCwiaWF0IjoxNTcyNTM3NDQ0LCJpc3MiOiJodHRwOi8vMTAuMTA0LjEyMS43Nzo4MDAwL2F1dGgvcmVhbG1zL1JFU1MiLCJzdWIiOiI2ZDQ4YWEwMC1iOTg1LTQ2YjEtOTU2Yy0xOWM5ZWZmODc4MWIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJyZXNzd2ViIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiOTkwYjI2YjEtYzk4MC00OGMxLWFkYzYtMWE5NzQzYjQ3YTliIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIiXSwicmVzb3VyY2VfYWNjZXNzIjp7InJlc3N3ZWIiOnsicm9sZXMiOlsiUmVnaW9uYWxTSCJdfX0sInNjb3BlIjoiIiwiY291bnRyeSI6Ik1ZIiwiYWRkcmVzcyI6eyJjb3VudHJ5IjoiMCJ9LCJuYW1lIjoiTGkgTGkgTHUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJteWN2MXZnYyIsImdpdmVuX25hbWUiOiJMaSIsImZhbWlseV9uYW1lIjoiTGkgTHUifQ.JX8jFn5iiT12FOvVUNgetFEDs8y_jysPQksdm4isH94uuaGCc4D2BhOxlflIwTSMAN7w3Mbn9P251wviKei2reAOAszxy7ANbqvkHdtAAg1xuJQJMVuP0dVOaEJVpr0pRaHXioRnNHeAn_dc_G7PZe10b-ZSYcITecgoP0WZsxVk3Oh8-svazeCUt_oI-p4jdZ4dkfffV4jB90fdDuEHh67sUAg4EfLKIUGOdfWsMje-atac9Gl7PAdn156L__1lsVvmtR_RDpNQlYKQDI_BULuy0tTBASCHve_Fh18HtsSEZ08N_BrkTrDkG7mV6expQ-fsjEAnu4Mb6mz3F0egzQ"
+						},
+						{
+							"key": "logout",
+							"value": "false"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Nov 2019 07:02:22 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1002,\n        \"name\": \"BAC Left\",\n        \"riskLabelId\": 2001,\n        \"riskThemeId\": 3001,\n        \"createdBy\": \"ressuser1\",\n        \"latestVersion\": \"v.1\",\n        \"active\": true\n    },\n    {\n        \"id\": 1003,\n        \"name\": \"BAC Right\",\n        \"riskLabelId\": 2001,\n        \"riskThemeId\": 3001,\n        \"createdBy\": \"ressuser1\",\n        \"latestVersion\": \"v.1\",\n        \"active\": true\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get URL By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{login_token}}"
+					},
+					{
+						"key": "ipaddress",
+						"type": "text",
+						"value": "172.27.234.149"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/b0b16590",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"b0b16590"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get BAC Available Templates",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{login_token}}"
+							},
+							{
+								"key": "ipaddress",
+								"type": "text",
+								"value": "172.27.234.149"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9010/ress/alerts-view/bac/templates?riskThemeId=3001&riskLabelId=2001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9010",
+							"path": [
+								"ress",
+								"alerts-view",
+								"bac",
+								"templates"
+							],
+							"query": [
+								{
+									"key": "riskThemeId",
+									"value": "3001"
+								},
+								{
+									"key": "riskLabelId",
+									"value": "2001"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "token, logout, filename, filetype"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ6eFN2SHNoVUFOWVlWbXRzOVRjckdSTEdGQ2lvZzBwZm1uemxiRXo2ekxZIn0.eyJqdGkiOiI1MjU1ZDQ0ZS0xN2UyLTRjY2QtYjVmNC0yOGIyNmFiZmZiMGUiLCJleHAiOjE1NzI1Mzc3NDQsIm5iZiI6MCwiaWF0IjoxNTcyNTM3NDQ0LCJpc3MiOiJodHRwOi8vMTAuMTA0LjEyMS43Nzo4MDAwL2F1dGgvcmVhbG1zL1JFU1MiLCJzdWIiOiI2ZDQ4YWEwMC1iOTg1LTQ2YjEtOTU2Yy0xOWM5ZWZmODc4MWIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJyZXNzd2ViIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiOTkwYjI2YjEtYzk4MC00OGMxLWFkYzYtMWE5NzQzYjQ3YTliIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIiXSwicmVzb3VyY2VfYWNjZXNzIjp7InJlc3N3ZWIiOnsicm9sZXMiOlsiUmVnaW9uYWxTSCJdfX0sInNjb3BlIjoiIiwiY291bnRyeSI6Ik1ZIiwiYWRkcmVzcyI6eyJjb3VudHJ5IjoiMCJ9LCJuYW1lIjoiTGkgTGkgTHUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJteWN2MXZnYyIsImdpdmVuX25hbWUiOiJMaSIsImZhbWlseV9uYW1lIjoiTGkgTHUifQ.JX8jFn5iiT12FOvVUNgetFEDs8y_jysPQksdm4isH94uuaGCc4D2BhOxlflIwTSMAN7w3Mbn9P251wviKei2reAOAszxy7ANbqvkHdtAAg1xuJQJMVuP0dVOaEJVpr0pRaHXioRnNHeAn_dc_G7PZe10b-ZSYcITecgoP0WZsxVk3Oh8-svazeCUt_oI-p4jdZ4dkfffV4jB90fdDuEHh67sUAg4EfLKIUGOdfWsMje-atac9Gl7PAdn156L__1lsVvmtR_RDpNQlYKQDI_BULuy0tTBASCHve_Fh18HtsSEZ08N_BrkTrDkG7mV6expQ-fsjEAnu4Mb6mz3F0egzQ"
+						},
+						{
+							"key": "logout",
+							"value": "false"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Nov 2019 07:02:22 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1002,\n        \"name\": \"BAC Left\",\n        \"riskLabelId\": 2001,\n        \"riskThemeId\": 3001,\n        \"createdBy\": \"ressuser1\",\n        \"latestVersion\": \"v.1\",\n        \"active\": true\n    },\n    {\n        \"id\": 1003,\n        \"name\": \"BAC Right\",\n        \"riskLabelId\": 2001,\n        \"riskThemeId\": 3001,\n        \"createdBy\": \"ressuser1\",\n        \"latestVersion\": \"v.1\",\n        \"active\": true\n    }\n]"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
