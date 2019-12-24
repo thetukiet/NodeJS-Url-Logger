@@ -14,8 +14,9 @@ class AppDao {
     findUrlById(id) {
         let sqlRequest = "SELECT id, value FROM url WHERE id=$id";
         let sqlParams = {$id: id};
-        return this.base.find(sqlRequest, sqlParams).then(rows =>
-            new Url(rows[0].id, rows[0].value));
+        return this.base.find(sqlRequest, sqlParams).then(rows =>{
+            return new Url(rows[0].id, rows[0].value)
+        });
     };
 
 

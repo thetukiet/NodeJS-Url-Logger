@@ -4,28 +4,28 @@ class BaseController {
     findSuccess(res) {
         return (result) => {
             res.status(301);
-            res.json(result);
+            res.json({Location: result.value});
         }
     }
 
     statsSuccess(res) {
-        return (result) => {
+        return (data) => {
             res.status(200);
-            res.json(result);
+            res.json(data);
         }
     }
 
-    addSuccess(res) {
-        return (result) => {
+    addSuccess(res, data) {
+        return () => {
             res.status(201);
-            res.json(result);
+            res.json(data);
         }
     }
 
-    addExisted(res) {
-        return (result) => {
+    addExisted(res, data) {
+        return () => {
             res.status(200);
-            res.json(result);
+            res.json(data);
         }
     }
 
