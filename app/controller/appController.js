@@ -4,7 +4,7 @@ const Url = require('../model/url');
 const shortHash = require('short-hash');
 const appConfig = require("../../config");
 
-class CarController {
+class AppController {
 
     constructor() {
         this.base = new BaseController();
@@ -65,4 +65,4 @@ class CarController {
 
 }
 
-module.exports = CarController;
+module.exports = AppController;
